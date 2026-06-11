@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+}
+
+body {
+    background: url('fundo-header.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+}
+
+.logo {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #d4af37;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #d4af37;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #b8962d;
+}
+
+/* Seção Sobre */
+.sobre {
+    padding: 50px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 20px;
+    border-radius: 15px;
+}
+
+.beneficios {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.card {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.1);
+}
+
+.card img {
+    width: 100%;
+    max-width: 100px;
+    margin-bottom: 15px;
+}
+
+/* Seção Produtos */
+.produtos {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 30px auto 0 auto;
+}
+
+.produto {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito Hover nos produtos */
+.produto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-ver {
+    margin-top: 10px;
+    background: #6b0f1a;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-ver:hover {
+    background: #8e1523;
+}
+
+/* Seção Nossa História (Novo) */
+.historia {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.historia h2 {
+    margin-bottom: 30px;
+    color: #6b0f1a;
+}
+
+.conteudo-historia {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+}
+
+.conteudo-historia p {
+    margin-bottom: 20px;
+}
+
+/* Modal */
+.modal-fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-conteudo {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+}
+
+#fechar-modal {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #6b0f1a;
+}
+
+.modal-galeria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#modal-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+.btn-wpp {
+    display: block;
+    padding: 15px;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background: #6b0f1a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.instagram-link {
+    text-decoration: none;
+    color: #ffda79; /* Cor amarelada para destacar no fundo vinho */
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: 0.3s;
+}
+
+.instagram-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
