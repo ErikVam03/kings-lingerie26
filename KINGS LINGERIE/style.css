@@ -128,11 +128,7 @@ header {
     padding: 60px 20px;
     background: #fff;
     text-align: center;
-}
 
-.historia h2 {
-    margin-bottom: 30px;
-    color: #6b0f1a;
 }
 
 .conteudo-historia {
@@ -154,57 +150,101 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: none; /* desativa blur pra evitar lag */
     display: none;
     align-items: center;
     justify-content: center;
     z-index: 1000;
+    transition: none; /* aparece instantâneo */
 }
 
 .modal-conteudo {
     background: white;
-    padding: 30px;
-    border-radius: 15px;
-    max-width: 500px;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 800px;
     width: 90%;
     position: relative;
     text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.1);
+    animation: none !important; /* remove animação */
+    transition: none !important; /* remove transições */
+    will-change: auto;
 }
 
+/* mantém o botão de fechar com hover suave (opcional) */
 #fechar-modal {
     position: absolute;
-    right: 15px;
-    top: 10px;
-    background: none;
-    border: none;
-    font-size: 30px;
+    right: 20px;
+    top: 20px;
+    background: #6b0f1a;
+    color: #ffffff !important;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    font-size: 24px;
+    font-weight: bold;
     cursor: pointer;
-    color: #6b0f1a;
-}
-
-.modal-galeria {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 15px;
+    z-index: 1050;
+    box-shadow: 0 4px 10px rgba(0,0,0,.3);
+    transition: background 0.15s, transform 0.12s; /* opcional: mantém feedback rápido */
+}
+
+#fechar-modal:hover {
+    background: #8e1523;
+    transform: scale(1.08);
+}
+
+.modal-galeria {
+    position: relative;
+    height: 500px; /* Define uma altura fixa pro box da imagem */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f4f4; /* Um cinzinha bem leve de fundo */
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
 #modal-img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 8px;
+    max-height: 100%; /* A imagem não vai passar da altura do box */
+    width: auto;      /* Mantém a proporção da foto */
+    object-fit: contain; /* Garante que a foto toda apareça sem cortar */
 }
 
-.btn-wpp {
-    display: block;
-    padding: 15px;
-    background: #25d366;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    margin-top: 20px;
+/* --- SETAS COM MAIS CONTRASTE --- */
+#btn-prev, #btn-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4); /* Fundo mais escuro pra destacar */
+    color: white; /* Cor branca fica melhor em fundo escuro */
+    border: none;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    z-index: 10;
+    transition: 0.3s;
+    display: flex; /* Centraliza a seta dentro do círculo */
+    align-items: center;
+    justify-content: center;
+}
+
+#btn-prev { left: 15px; }
+#btn-next { right: 15px; }
+
+#btn-prev:hover, #btn-next:hover {
+    background: rgba(0, 0, 0, 0.7); /* Fica bem preto no hover */
+    transform: translateY(-50%) scale(1.1);
 }
 
 /* Footer */
