@@ -272,19 +272,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
             entries.forEach(entry => {
 
-                if (!entry.isIntersecting) {
-                    return;
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                } else {
+                    entry.target.classList.remove("visible");
                 }
-
-                entry.target.classList.add("visible");
-
-                observer.unobserve(entry.target);
 
             });
 
         },
         {
-            threshold: 0.12
+            threshold: 0.10
         }
     );
 
